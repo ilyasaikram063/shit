@@ -74,8 +74,8 @@ DAFTAR CHANNEL
 2. gtv
 3. rcti
 4. cnn
-5. antv
-6. indosiar
+5. antv (mati)
+6. indosiar (mati)
 7. tvone
 '
  
@@ -84,25 +84,25 @@ read -p "masukan key-live-stream fb: " key
  
 if [ $jawab -eq 1 ];
 then
-$fgu$mnctv$fga$token$key
+echo "$fgu$mnctv$fga$token$key"
 elif [ $jawab -eq 2 ];
 then
-$fgu$gtv$fga$token$key
+echo "$fgu$gtv$fga$token$key"
 elif [ $jawab -eq 3 ];
 then
-$fgu$rcti$fga$token$key
+echo "$fgu$rcti$fga$token$key"
 elif [ $jawab -eq 4 ];
 then
-$fgu$cnn$fga$token$key
+echo "$fgu$cnn$fga$token$key"
 elif [ $jawab -eq 5 ];
 then
-$fgu$cnn$fga$token$key
+echo "$fgu$antv$fga$token$key"
 elif [ $jawab -eq 6 ];
 then
-$fgu$cnn$fga$token$key
+echo "$fgu$indosiar$fga$token$key"
 elif [ $jawab -eq 7 ];
 then
-$tvone$key
+echo "$tvone$key"
 else
 echo '
 aduh, aya nu salah yas
