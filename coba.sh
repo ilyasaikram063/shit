@@ -8,10 +8,6 @@ gtv=' "https://vcdn2.rctiplus.id/live/eds/gtv_fta/live_fta/gtv_fta-avc1_1000000=
  
 cnn=' "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8" '
  
-antv=' "http://210.210.155.35/qwr9ew/s/s07/02.m3u8" '
- 
-indosiar=' "http://210.210.155.35/session/62c3f4aa-7aec-11ea-b162-c81f66f89318/qwr9ew/s/s04/02.m3u8?app_type=mobile&userid=d0cu4j7cnm&tkn=BEMV9570E7UC93I64J3E6KFTM2B2NMJK&chname=IndosiarC&chname=Indosiar" '
- 
 tvone='youtube-dl -f best "https://youtu.be/XdZ2nJvmfrI" -o - | ffmpeg -re -i - -ar 44100 -vcodec copy -f flv "rtmp://localhost:8888/rtmp/'
  
 fga="-c:v copy -c:a aac -ar 44100 -ab 128k -ac 2 -strict -2 -flags +global_header -bsf:a aac_adtstoasc -bufsize 3000k -f flv"
@@ -74,9 +70,7 @@ DAFTAR CHANNEL
 2. gtv
 3. rcti
 4. cnn
-5. antv (mati)
-6. indosiar (mati)
-7. tvone
+5. tvone
 '
  
 read -p "pilih nomer channel: " jawab
@@ -95,12 +89,6 @@ elif [ $jawab -eq 4 ];
 then
 echo "$fgu$cnn$fga$token$key"
 elif [ $jawab -eq 5 ];
-then
-echo "$fgu$antv$fga$token$key"
-elif [ $jawab -eq 6 ];
-then
-echo "$fgu$indosiar$fga$token$key"
-elif [ $jawab -eq 7 ];
 then
 echo "$tvone$key"
 else
