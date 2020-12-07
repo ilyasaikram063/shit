@@ -97,6 +97,7 @@ nano cnn.sh
 sh cnn.sh
 elif [ $jawab -eq 5 ];
 then
+cd tv
 echo 'youtube-dl -f best "https://youtu.be/XdZ2nJvmfrI" -o - | ffmpeg -re -i - -ar 44100 -vcodec copy -f flv "rtmp://localhost:8888/rtmp/' > tvone.sh
 cd
 cd shit/tv/
