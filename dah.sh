@@ -14,6 +14,8 @@ fga="-c:v copy -c:a aac -ar 44100 -ab 128k -ac 2 -strict -2 -flags +global_heade
  
 token=' "rtmp://localhost:8888/rtmp/'
 
+cd shit
+
 echo '
 DAFTAR CHANNEL
  
@@ -23,25 +25,34 @@ DAFTAR CHANNEL
 4. cnn
 5. tvone
 '
-
+ 
 read -p "pilih nomer channel: " jawab
 read -p "masukan key-live-stream fb: " key
  
 if [ $jawab -eq 1 ];
 then
-echo "$fgu$mnctv$fga$token$key"
+cd tv
+echo '$fgu$mnctv$fga$token$key' > mnctv.sh
+sh mnctv.sh
 elif [ $jawab -eq 2 ];
 then
-echo "$fgu$gtv$fga$token$key"
+cd tv
+echo '$fgu$gtv$fga$token$key' > gtv.sh
+sh gtv.sh
 elif [ $jawab -eq 3 ];
 then
-echo "$fgu$rcti$fga$token$key"
+cd tv
+echo '$fgu$rcti$fga$token$key' > rcti.sh
+sh rcti.sh
 elif [ $jawab -eq 4 ];
 then
-echo "$fgu$cnn$fga$token$key"
+cd tv
+echo '$fgu$cnn$fga$token$key' > cnn.sh
+sh cnn.sh
 elif [ $jawab -eq 5 ];
 then
-echo "$tvone$key"
+echo '$tvone$key' > tvone.sh
+sh tvone.sh
 else
 echo '
 aduh, aya nu salah yas
