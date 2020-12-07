@@ -67,7 +67,8 @@ if [ $jawab -eq 1 ];
 then
 cd tv
 echo 'read -p "masukan key: " key
-ffmpeg -re -i "https://vcdn2.rctiplus.id/live/eds/mnctv_fta/live_fta/mnctv_fta-avc1_2000000=1-mp4a_64000_eng=2.m3u8" -c:v copy -c:a aac -ar 44100 -ab 128k -ac 2 -strict -2 -flags +global_header -bsf:a aac_adtstoasc -bufsize 3000k -f flv "rtmp://localhost:8888/rtmp/$key' > mnctv.sh
+ffmpeg -re -i "https://vcdn2.rctiplus.id/live/eds/mnctv_fta/live_fta/mnctv_fta-avc1_2000000=1-mp4a_64000_eng=2.m3u8" -c:v copy -c:a aac -ar 44100 -ab 128k -ac 2 -strict -2 -flags +global_header -bsf:a aac_adtstoasc -bufsize 3000k -f flv "rtmp://localhost:8888/rtmp/$key 
+' > mnctv.sh
 sh mnctv.sh
 elif [ $jawab -eq 2 ];
 then
